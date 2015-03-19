@@ -13,6 +13,7 @@
     "connect": "^3.3.5",
     "http-proxy": "^1.9.0",
     "lodash": "^3.5.0",
-    "node-http-proxy": "^0.2.3"
+    "node-http-proxy": "^0.2.3",
+    "astromo-metrics": "astromo-crew/astromo-metrics.git"
   }
 }

@@ -14,8 +14,9 @@ var proxy = httpProxy.createServer({ target: TARGET });
  * Astromo Metrics middleware layer
  */
 app.use(require('astromo-metrics')({
-  host  : TARGET,
-  debug : true
+  gatewayUrl  : 'ws://localhost:8081',
+  host        : TARGET,
+  debug       : true
 }));
 
 /**

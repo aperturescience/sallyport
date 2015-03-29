@@ -4,6 +4,7 @@ var http      = require('http'),
     connect   = require('connect'),
     httpProxy = require('http-proxy');
 
+var port   = process.env.PORT || 3000;
 var TARGET = 'http://google.be'; // set customer's target
 
 // Basic HTTP Proxy Server
@@ -26,4 +27,4 @@ app.use(function (req, res) {
   proxy.web(req, res);
 });
 
-http.createServer(app).listen(3000);
+http.createServer(app).listen(port);

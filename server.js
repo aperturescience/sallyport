@@ -2,7 +2,7 @@
 
 var SallyPort = require('./lib/sallyport')
 var config    = require('season').readFileSync('./config.cson')
-var port      = config.port || process.env.PORT || 3000
+var port      = process.env.PORT || config.port || 3000
 
 try {
 

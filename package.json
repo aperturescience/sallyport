@@ -15,5 +15,9 @@
     "http-proxy": "^1.11.1",
     "lodash": "^3.5.0",
     "season": "^5.2.0"
+  },
+  "devDependencies": {
+    "supertest": "^1.0.1",
+    "chai": "^3.0.0"
   }
 }

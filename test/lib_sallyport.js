@@ -19,6 +19,20 @@ describe('lib/sallyport.js', function() {
       request(sp).get('/').expect(500, done)
     })
 
+    it ('should have correct default options', function() {
+      var sp = new SallyPort({ target : 'does.not.exist' }).listen(3000)
+
+      expect(sp.options).to.have.property('verbose').and.equal(false)
+      expect(sp.options).to.have.property('target')
+    })
+
+    it ('should have overwritable options', function() {
+      var sp = new SallyPort({ target : 'does.not.exist', verbose: true }).listen(3000)
+
+      expect(sp.options).to.have.property('verbose').and.equal(true)
+      expect(sp.options).to.have.property('target')
+    })
+
   })
 
 })

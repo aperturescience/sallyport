@@ -1,4 +1,10 @@
-port    : 3000
-dsn     : 'https://4c575ac0-6c6d-410d-a30c-ce4db9260b7b@app.astromo.io/1'
-target  : 'https://api.soundcloud.com'
-verbose : false
+port       : 3000
+dsn        : 'https://4c575ac0-6c6d-410d-a30c-ce4db9260b7b@app.astromo.io/1'
+target     : 'https://graph.facebook.com'
+verbose    : false
+middleware : [
+  'powered-by'
+  metrics :
+    url   : 'http://127.0.0.1:8086'
+    debug : false
+]
